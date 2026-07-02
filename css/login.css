@@ -1,0 +1,127 @@
+/* Página de login */
+
+/* a página usa flex pra manter o rodapé embaixo */
+body.pagina-login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.area-login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  background: radial-gradient(circle at 50% 0%, #eef1fb, #F9F9FF 60%);
+}
+
+.card-login {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  padding: clamp(24px, 5vw, 36px);
+  box-shadow: 0 20px 50px -30px rgba(22, 28, 39, 0.4);
+}
+
+/* topo do card: logo, título e frase */
+.card-login > div:first-child {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.card-login > div:first-child b {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--escuro);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 12px;
+}
+.card-login h1 {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+.card-login > div:first-child p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--cinza);
+}
+
+/* ---------- Formulário ---------- */
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.linha-senha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.linha-senha label {
+  margin-bottom: 0;
+}
+.linha-senha a {
+  font-size: 12.5px;
+  color: var(--azul);
+  font-weight: 500;
+}
+
+.botao-enviar {
+  background: var(--escuro);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 15.5px;
+  padding: 14px;
+  border-radius: 11px;
+}
+
+/* ---------- "ou acesse com" ---------- */
+
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  font-size: 12.5px;
+  color: var(--cinza-claro);
+}
+.divisor span {
+  flex: 1;
+  height: 1px;
+  background: #E6E9F1;
+}
+
+.botoes-sociais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.botoes-sociais button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--borda-campo);
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* bolinha azul do Google */
+.botoes-sociais i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--azul);
+}

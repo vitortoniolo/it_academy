@@ -1,0 +1,149 @@
+/* Página de checkout */
+
+.topo-checkout {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px 16px 10px;
+}
+.topo-checkout h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.topo-checkout p {
+  font-size: 15px;
+  color: var(--cinza);
+}
+
+/* pagamento e resumo lado a lado (empilha no celular) */
+.area-checkout {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.painel {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: clamp(20px, 4vw, 30px);
+}
+.painel h2, .resumo h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ---------- Dados do cartão ---------- */
+
+.form-cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+/* nota sobre pix e boleto */
+.painel > p {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--cinza);
+}
+
+/* ---------- Resumo do pedido ---------- */
+
+.resumo {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 24px;
+  position: sticky;
+  top: 84px;
+}
+.item-resumo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.item-resumo .miniatura {
+  width: 54px;
+  height: 54px;
+  border-radius: 11px;
+  background: var(--azul-escuro);
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+.item-resumo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-resumo strong {
+  font-size: 14.5px;
+  line-height: 1.3;
+}
+.item-resumo small {
+  font-size: 12.5px;
+  color: var(--cinza);
+}
+
+/* totais */
+.totais {
+  border-top: 1px solid #EEF1F7;
+  padding-top: 16px;
+}
+.totais > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  color: #475569;
+  margin-bottom: 11px;
+}
+.totais .desconto {
+  color: var(--verde);
+}
+.totais > div:last-child {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--escuro);
+  border-top: 1px solid #EEF1F7;
+  padding-top: 11px;
+  margin-bottom: 0;
+}
+
+.botao-pagar {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 11px;
+}
+/* aviso de pagamento seguro */
+.resumo > p {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--cinza-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+@media (min-width: 560px) {
+  .topo-checkout { padding: 34px 20px 10px; }
+  .area-checkout { padding: 20px; }
+}

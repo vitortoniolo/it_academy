@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT_ACADEMY - Aprenda TI do zero ao avançado</title>
+  <meta name="description" content="Cursos de tecnologia baseados em projetos reais. Aprenda as habilidades mais demandadas do mercado.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Menu superior -->
+  <header class="cabecalho">
+    <nav class="menu">
+      <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+
+      <div class="links-menu">
+        <a href="index.html" class="ativo">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="detalhes.html">Detalhes</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+
+      <div class="acoes-menu">
+        <a href="login.html" class="botao-login">Entrar</a>
+        <a href="checkout.html" class="botao-icone" aria-label="Carrinho">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>
+          <span>3</span>
+        </a>
+        <button type="button" class="botao-icone" id="btn-menu" aria-label="Abrir menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu que abre no celular -->
+    <div class="menu-mobile" id="menu-mobile">
+      <a href="index.html">Home <span></span></a>
+      <a href="cursos.html">Cursos</a>
+      <a href="detalhes.html">Detalhes</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="matricula.html">Matrícula</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html">Entrar / Cadastrar</a>
+    </div>
+  </header>
+
+  <!-- Banner com carrossel -->
+  <section class="banner">
+    <div>
+      <div class="swiper carrossel">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide slide">
+            <img src="assets/hero-classroom.png" alt="Sala de aula de tecnologia">
+            <div class="slide-sombra"></div>
+            <div class="slide-conteudo">
+              <span class="slide-etiqueta">TURMAS 2026 ABERTAS</span>
+              <h1>Aprenda TI do zero ao avançado</h1>
+              <p>Domine as habilidades mais demandadas pelo mercado com cursos práticos baseados em projetos reais.</p>
+              <div>
+                <a href="cursos.html" class="botao botao-azul">Ver cursos →</a>
+                <a href="sobre.html" class="botao botao-transparente">Sobre nós</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide slide-azul">
+            <div class="slide-conteudo">
+              <span class="slide-etiqueta clara">DESTAQUE</span>
+              <h2>Bootcamp Full-Stack Moderno</h2>
+              <p>React, Node.js e bancos de dados em 48h de conteúdo prático. Saia construindo aplicações completas.</p>
+              <div>
+                <a href="detalhes.html" class="botao botao-branco">Ver detalhes</a>
+                <span>R$ 299,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide slide-escuro">
+            <div class="slide-conteudo">
+              <span class="slide-etiqueta">MATRÍCULAS</span>
+              <h2>Comece sua carreira em tech hoje</h2>
+              <p>Escolha sua turma, reserve sua vaga e pague em até 12x. Certificado reconhecido pelo mercado.</p>
+              <div>
+                <a href="matricula.html" class="botao botao-azul">Fazer matrícula</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="secao">
+    <div class="lista-categorias">
+      <a href="cursos.html">Todos</a>
+      <a href="cursos.html">Web Dev</a>
+      <a href="cursos.html">Data Science</a>
+      <a href="cursos.html">UX/UI</a>
+      <a href="cursos.html">DevOps</a>
+      <a href="cursos.html">Mobile</a>
+    </div>
+  </section>
+
+  <!-- Números da plataforma -->
+  <section class="secao">
+    <div class="numeros">
+      <div><b>52+</b><span>Cursos disponíveis</span></div>
+      <div><b>12k</b><span>Alunos ativos</span></div>
+      <div><b>4.8</b><span>Nota média</span></div>
+      <div><b>98%</b><span>Satisfação</span></div>
+    </div>
+  </section>
+
+  <!-- Cursos em destaque -->
+  <section class="secao">
+    <div>
+      <div class="linha-titulo">
+        <div>
+          <h2 class="titulo-secao">Cursos em destaque</h2>
+          <p>Os mais procurados da plataforma esta semana.</p>
+        </div>
+        <a href="cursos.html">Ver todos →</a>
+      </div>
+      <div class="grade-cursos">
+
+        <a href="detalhes.html" class="card-curso">
+          <div class="capa" style="background:#1e3a8a;">
+            <img src="assets/cursos/fullstack.jpg" alt="Bootcamp Full-Stack Moderno" loading="lazy">
+            <span class="tag">REACT · NODE · DB</span>
+          </div>
+          <div class="info">
+            <h3>Bootcamp Full-Stack Moderno</h3>
+            <p>Instrutor(a): Carlos Almeida</p>
+            <div>
+              <span class="nota"><b>★</b>4.9 <i>(1.2k)</i></span>
+              <span class="preco">R$ 299</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso">
+          <div class="capa" style="background:#5b21b6;">
+            <img src="assets/cursos/data-science.jpg" alt="Data Science de A a Z" loading="lazy">
+            <span class="tag">PYTHON · ML</span>
+          </div>
+          <div class="info">
+            <h3>Data Science de A a Z</h3>
+            <p>Instrutor(a): Mariana Costa</p>
+            <div>
+              <span class="nota"><b>★</b>4.8 <i>(850)</i></span>
+              <span class="preco">R$ 199</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso">
+          <div class="capa" style="background:#0f766e;">
+            <img src="assets/cursos/ui-ux.jpg" alt="Fundamentos de UI/UX" loading="lazy">
+            <span class="tag">FIGMA · DESIGN</span>
+          </div>
+          <div class="info">
+            <h3>Fundamentos de UI/UX</h3>
+            <p>Instrutor(a): Pedro Silva</p>
+            <div>
+              <span class="nota"><b>★</b>4.7 <i>(420)</i></span>
+              <span class="preco">R$ 149</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso">
+          <div class="capa" style="background:#0c4a6e;">
+            <img src="assets/cursos/arquitetura-sistemas.jpg" alt="Arquitetura de Sistemas Escaláveis" loading="lazy">
+            <span class="tag">MICROSERVICES · CLOUD</span>
+          </div>
+          <div class="info">
+            <h3>Arquitetura de Sistemas Escaláveis</h3>
+            <p>Instrutor(a): Carlos Mendes</p>
+            <div>
+              <span class="nota"><b>★</b>4.8 <i>(124)</i></span>
+              <span class="preco">R$ 299</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que estudar aqui -->
+  <section class="secao">
+    <div>
+      <h2 class="titulo-secao">Por que estudar na IT_ACADEMY</h2>
+      <div class="lista-motivos">
+        <div class="motivo">
+          <div class="icone">◆</div>
+          <h3>Projetos reais</h3>
+          <p>Construa um portfólio profissional enquanto aprende, com projetos do mundo real.</p>
+        </div>
+        <div class="motivo">
+          <div class="icone">✦</div>
+          <h3>Certificado válido</h3>
+          <p>Receba certificados reconhecidos pelo mercado ao concluir cada trilha.</p>
+        </div>
+        <div class="motivo">
+          <div class="icone">∞</div>
+          <h3>Acesso vitalício</h3>
+          <p>Estude no seu ritmo com acesso para sempre e atualizações gratuitas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="secao">
+    <div class="chamada">
+      <h2>Pronto para dar o próximo passo?</h2>
+      <p>Reserve sua vaga na próxima turma e comece a construir seu portfólio em tecnologia.</p>
+      <a href="matricula.html" class="botao botao-branco">Fazer matrícula agora</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <div>
+        <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+        <p>Educação em tecnologia baseada em projetos reais. Aprenda as habilidades mais demandadas do mercado.</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+      </div>
+      <div>
+        <h4>Conta</h4>
+        <a href="login.html">Entrar</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 IT_ACADEMY. Projeto acadêmico.</span>
+      <div>
+        <a href="sobre.html">Privacidade</a>
+        <a href="sobre.html">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

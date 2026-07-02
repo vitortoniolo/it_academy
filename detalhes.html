@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arquitetura de Sistemas Escaláveis - IT_ACADEMY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/detalhes.css">
+</head>
+<body>
+
+  <!-- Menu superior -->
+  <header class="cabecalho">
+    <nav class="menu">
+      <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+
+      <div class="links-menu">
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="detalhes.html" class="ativo">Detalhes</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+
+      <div class="acoes-menu">
+        <a href="login.html" class="botao-login">Entrar</a>
+        <a href="checkout.html" class="botao-icone" aria-label="Carrinho">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>
+          <span>3</span>
+        </a>
+        <button type="button" class="botao-icone" id="btn-menu" aria-label="Abrir menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu que abre no celular -->
+    <div class="menu-mobile" id="menu-mobile">
+      <a href="index.html">Home</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="detalhes.html">Detalhes <span></span></a>
+      <a href="sobre.html">Sobre</a>
+      <a href="matricula.html">Matrícula</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html">Entrar / Cadastrar</a>
+    </div>
+  </header>
+
+  <!-- Link de voltar -->
+  <div class="voltar">
+    <a href="cursos.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Voltar ao catálogo
+    </a>
+  </div>
+
+  <!-- Conteúdo do curso + card de preço -->
+  <section class="detalhes-curso">
+    <div>
+      <!-- Vídeo de apresentação -->
+      <div class="video">
+        <button type="button" aria-label="Reproduzir vídeo">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#161C27"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+        </button>
+        <span>MICROSERVICES · CLOUD</span>
+      </div>
+
+      <h1>Arquitetura de Sistemas Escaláveis</h1>
+
+      <div class="linha-instrutor">
+        <div class="avatar">CM</div>
+        <div>
+          <strong>Prof. Carlos Mendes</strong>
+          <small>Engenheiro de Software Senior</small>
+        </div>
+        <div class="metricas">
+          <span class="nota"><b>★</b>4.8 <i>(124)</i></span>
+          <span>1.5k alunos</span>
+        </div>
+      </div>
+
+      <!-- Descrição -->
+      <div class="bloco">
+        <h2>Descrição do curso</h2>
+        <p>Aprenda os fundamentos de arquitetura de software para sistemas de alta disponibilidade. Este curso abrange desde padrões básicos até microsserviços avançados, com uma abordagem prática e estrutural.</p>
+        <div class="habilidades">
+          <span>Microsserviços</span>
+          <span>Mensageria</span>
+          <span>Cloud</span>
+          <span>Docker</span>
+          <span>Alta disponibilidade</span>
+        </div>
+      </div>
+
+      <!-- Módulos -->
+      <div class="bloco">
+        <h2>Módulos do curso</h2>
+
+        <div class="modulo">
+          <div><strong>Módulo 1: Fundamentos</strong><span>6 aulas</span></div>
+          <p>Princípios de arquitetura, requisitos não-funcionais, escalabilidade vertical e horizontal e trade-offs essenciais.</p>
+        </div>
+
+        <div class="modulo">
+          <div><strong>Módulo 2: Monolitos vs Microsserviços</strong><span>8 aulas</span></div>
+          <p>Quando usar cada abordagem, decomposição de domínios, bounded contexts e estratégias de migração.</p>
+        </div>
+
+        <div class="modulo">
+          <div><strong>Módulo 3: Padrões de Mensageria</strong><span>7 aulas</span></div>
+          <p>Filas, tópicos, event-driven, idempotência, entrega garantida e padrões saga para transações distribuídas.</p>
+        </div>
+
+        <div class="modulo">
+          <div><strong>Módulo 4: Observabilidade &amp; Deploy</strong><span>5 aulas</span></div>
+          <p>Logging, métricas, tracing distribuído, CI/CD e estratégias de deploy sem downtime.</p>
+        </div>
+      </div>
+
+      <!-- Avaliações -->
+      <div class="bloco">
+        <h2>Avaliações dos alunos</h2>
+
+        <div class="avaliacao">
+          <div>
+            <div class="avatar">MS</div>
+            <strong>Maria S.</strong>
+            <span>★★★★★</span>
+          </div>
+          <p>Conteúdo denso e muito bem estruturado. Os módulos de mensageria mudaram a forma como eu penso sistemas.</p>
+        </div>
+
+        <div class="avaliacao">
+          <div>
+            <div class="avatar">JP</div>
+            <strong>João P.</strong>
+            <span>★★★★★</span>
+          </div>
+          <p>O professor explica conceitos complexos de forma simples. Recomendo para quem já tem base.</p>
+        </div>
+
+        <div class="avaliacao">
+          <div>
+            <div class="avatar">AL</div>
+            <strong>Ana L.</strong>
+            <span>★★★★☆</span>
+          </div>
+          <p>Excelente, só senti falta de mais exercícios práticos no módulo final.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card de preço -->
+    <aside class="card-preco">
+      <p>Preço único</p>
+      <strong>R$ 299,00</strong>
+      <small>ou 12x de R$ 29,08</small>
+      <a href="checkout.html" class="botao botao-azul botao-largo">Comprar agora</a>
+      <a href="matricula.html" class="botao botao-claro botao-largo">Fazer matrícula</a>
+      <div class="beneficios">
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 40 horas de conteúdo</div>
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Acesso vitalício</div>
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Certificado de conclusão</div>
+        <div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Projetos práticos</div>
+      </div>
+    </aside>
+  </section>
+
+  <div class="espaco"></div>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <div>
+        <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+        <p>Educação em tecnologia baseada em projetos reais. Aprenda as habilidades mais demandadas do mercado.</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+      </div>
+      <div>
+        <h4>Conta</h4>
+        <a href="login.html">Entrar</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 IT_ACADEMY. Projeto acadêmico.</span>
+      <div>
+        <a href="sobre.html">Privacidade</a>
+        <a href="sobre.html">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

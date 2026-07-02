@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cursos - IT_ACADEMY</title>
+  <meta name="description" content="Explore o catálogo de cursos da IT_ACADEMY. Filtre por categoria ou busque por nome.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/cursos.css">
+</head>
+<body>
+
+  <!-- Menu superior -->
+  <header class="cabecalho">
+    <nav class="menu">
+      <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+
+      <div class="links-menu">
+        <a href="index.html">Home</a>
+        <a href="cursos.html" class="ativo">Cursos</a>
+        <a href="detalhes.html">Detalhes</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+
+      <div class="acoes-menu">
+        <a href="login.html" class="botao-login">Entrar</a>
+        <a href="checkout.html" class="botao-icone" aria-label="Carrinho">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>
+          <span>3</span>
+        </a>
+        <button type="button" class="botao-icone" id="btn-menu" aria-label="Abrir menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu que abre no celular -->
+    <div class="menu-mobile" id="menu-mobile">
+      <a href="index.html">Home</a>
+      <a href="cursos.html">Cursos <span></span></a>
+      <a href="detalhes.html">Detalhes</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="matricula.html">Matrícula</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html">Entrar / Cadastrar</a>
+    </div>
+  </header>
+
+  <!-- Topo escuro com a busca -->
+  <section class="faixa-escura topo-catalogo">
+    <div>
+      <span class="etiqueta">CATÁLOGO</span>
+      <h1>Explore nossos cursos</h1>
+      <p>Filtre por categoria ou busque pelo nome do curso ou instrutor.</p>
+      <div class="busca">
+        <span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+        <input type="text" id="campo-busca" placeholder="Buscar cursos, ex: Python, React, UX..." aria-label="Buscar cursos">
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros de categoria -->
+  <section class="filtros">
+    <div>
+      <button type="button" class="filtro ativo" data-categoria="Todos">Todos</button>
+      <button type="button" class="filtro" data-categoria="Web Dev">Web Dev</button>
+      <button type="button" class="filtro" data-categoria="Data Science">Data Science</button>
+      <button type="button" class="filtro" data-categoria="UX/UI">UX/UI</button>
+      <button type="button" class="filtro" data-categoria="DevOps">DevOps</button>
+      <button type="button" class="filtro" data-categoria="Mobile">Mobile</button>
+    </div>
+  </section>
+
+  <!-- Lista de cursos (o JavaScript mostra/esconde conforme o filtro e a busca) -->
+  <section class="secao">
+    <div>
+      <p id="contagem"></p>
+      <div class="grade-cursos" id="lista-cursos">
+
+        <a href="detalhes.html" class="card-curso" data-categoria="Web Dev">
+          <div class="capa" style="background:#1e3a8a;">
+            <img src="assets/cursos/fullstack.jpg" alt="Bootcamp Full-Stack Moderno" loading="lazy">
+            <span class="tag">REACT · NODE · DB</span>
+            <span class="nivel">Intermediário</span>
+          </div>
+          <div class="info">
+            <span class="categoria">Web Dev</span>
+            <h3>Bootcamp Full-Stack Moderno</h3>
+            <p>Instrutor(a): Carlos Almeida</p>
+            <div>
+              <span class="nota"><b>★</b>4.9 <i>(1.2k)</i></span>
+              <span class="preco">R$ 299</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="Data Science">
+          <div class="capa" style="background:#5b21b6;">
+            <img src="assets/cursos/data-science.jpg" alt="Data Science de A a Z" loading="lazy">
+            <span class="tag">PYTHON · ML</span>
+            <span class="nivel">Iniciante</span>
+          </div>
+          <div class="info">
+            <span class="categoria">Data Science</span>
+            <h3>Data Science de A a Z</h3>
+            <p>Instrutor(a): Mariana Costa</p>
+            <div>
+              <span class="nota"><b>★</b>4.8 <i>(850)</i></span>
+              <span class="preco">R$ 199</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="UX/UI">
+          <div class="capa" style="background:#0f766e;">
+            <img src="assets/cursos/ui-ux.jpg" alt="Fundamentos de UI/UX" loading="lazy">
+            <span class="tag">FIGMA · DESIGN</span>
+            <span class="nivel">Iniciante</span>
+          </div>
+          <div class="info">
+            <span class="categoria">UX/UI</span>
+            <h3>Fundamentos de UI/UX</h3>
+            <p>Instrutor(a): Pedro Silva</p>
+            <div>
+              <span class="nota"><b>★</b>4.7 <i>(420)</i></span>
+              <span class="preco">R$ 149</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="DevOps">
+          <div class="capa" style="background:#0c4a6e;">
+            <img src="assets/cursos/arquitetura-sistemas.jpg" alt="Arquitetura de Sistemas Escaláveis" loading="lazy">
+            <span class="tag">MICROSERVICES · CLOUD</span>
+            <span class="nivel">Avançado</span>
+          </div>
+          <div class="info">
+            <span class="categoria">DevOps</span>
+            <h3>Arquitetura de Sistemas Escaláveis</h3>
+            <p>Instrutor(a): Carlos Mendes</p>
+            <div>
+              <span class="nota"><b>★</b>4.8 <i>(124)</i></span>
+              <span class="preco">R$ 299</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="Mobile">
+          <div class="capa" style="background:#7c2d12;">
+            <img src="assets/cursos/mobile-react-native.jpg" alt="Apps Mobile com React Native" loading="lazy">
+            <span class="tag">REACT NATIVE · EXPO</span>
+            <span class="nivel">Intermediário</span>
+          </div>
+          <div class="info">
+            <span class="categoria">Mobile</span>
+            <h3>Apps Mobile com React Native</h3>
+            <p>Instrutor(a): Júlia Ramos</p>
+            <div>
+              <span class="nota"><b>★</b>4.6 <i>(310)</i></span>
+              <span class="preco">R$ 229</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="DevOps">
+          <div class="capa" style="background:#1e293b;">
+            <img src="assets/cursos/devops-aws.jpg" alt="DevOps e Cloud na AWS" loading="lazy">
+            <span class="tag">DOCKER · K8S · AWS</span>
+            <span class="nivel">Avançado</span>
+          </div>
+          <div class="info">
+            <span class="categoria">DevOps</span>
+            <h3>DevOps &amp; Cloud na AWS</h3>
+            <p>Instrutor(a): Rafael Lima</p>
+            <div>
+              <span class="nota"><b>★</b>4.9 <i>(560)</i></span>
+              <span class="preco">R$ 279</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="Data Science">
+          <div class="capa" style="background:#4338ca;">
+            <img src="assets/cursos/python-dados.jpg" alt="Python para Análise de Dados" loading="lazy">
+            <span class="tag">PYTHON · NUMPY</span>
+            <span class="nivel">Iniciante</span>
+          </div>
+          <div class="info">
+            <span class="categoria">Data Science</span>
+            <h3>Python para Análise de Dados</h3>
+            <p>Instrutor(a): Beatriz Nunes</p>
+            <div>
+              <span class="nota"><b>★</b>4.7 <i>(980)</i></span>
+              <span class="preco">R$ 159</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="detalhes.html" class="card-curso" data-categoria="Web Dev">
+          <div class="capa" style="background:#155e75;">
+            <img src="assets/cursos/frontend-typescript.jpg" alt="Front-End Avançado com TypeScript" loading="lazy">
+            <span class="tag">TYPESCRIPT · NEXT</span>
+            <span class="nivel">Avançado</span>
+          </div>
+          <div class="info">
+            <span class="categoria">Web Dev</span>
+            <h3>Front-End Avançado com TypeScript</h3>
+            <p>Instrutor(a): Lucas Pereira</p>
+            <div>
+              <span class="nota"><b>★</b>4.8 <i>(640)</i></span>
+              <span class="preco">R$ 249</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div id="sem-resultados" style="display:none;">
+        <p>🔍</p>
+        <p>Nenhum curso encontrado.</p>
+        <p>Tente outro termo ou categoria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <div>
+        <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+        <p>Educação em tecnologia baseada em projetos reais. Aprenda as habilidades mais demandadas do mercado.</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+      </div>
+      <div>
+        <h4>Conta</h4>
+        <a href="login.html">Entrar</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 IT_ACADEMY. Projeto acadêmico.</span>
+      <div>
+        <a href="sobre.html">Privacidade</a>
+        <a href="sobre.html">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/cursos.js"></script>
+</body>
+</html>

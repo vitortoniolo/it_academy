@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrícula - IT_ACADEMY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/matricula.css">
+</head>
+<body>
+
+  <!-- Menu superior -->
+  <header class="cabecalho">
+    <nav class="menu">
+      <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+
+      <div class="links-menu">
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="detalhes.html">Detalhes</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html" class="ativo">Matrícula</a>
+        <a href="perfil.html">Perfil</a>
+      </div>
+
+      <div class="acoes-menu">
+        <a href="login.html" class="botao-login">Entrar</a>
+        <a href="checkout.html" class="botao-icone" aria-label="Carrinho">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>
+          <span>3</span>
+        </a>
+        <button type="button" class="botao-icone" id="btn-menu" aria-label="Abrir menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu que abre no celular -->
+    <div class="menu-mobile" id="menu-mobile">
+      <a href="index.html">Home</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="detalhes.html">Detalhes</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="matricula.html">Matrícula <span></span></a>
+      <a href="perfil.html">Perfil</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html">Entrar / Cadastrar</a>
+    </div>
+  </header>
+
+  <!-- Topo escuro -->
+  <section class="faixa-escura topo-matricula">
+    <div>
+      <span class="etiqueta">MATRÍCULA</span>
+      <h1>Reserve sua vaga</h1>
+      <p>Preencha o formulário abaixo e nossa equipe entrará em contato para confirmar sua matrícula na próxima turma.</p>
+    </div>
+  </section>
+
+  <!-- Formulário de matrícula -->
+  <section class="area-matricula">
+
+    <!-- Mensagem de sucesso (aparece depois do envio) -->
+    <div id="confirmacao" style="display:none;">
+      <div>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h2>Matrícula enviada!</h2>
+      <p id="texto-confirmacao">Recebemos seus dados. Em breve nossa equipe entrará em contato pelo e-mail informado.</p>
+      <a href="index.html" class="botao botao-escuro">Voltar à home</a>
+    </div>
+
+    <form id="form-matricula" novalidate>
+      <div class="campos">
+
+        <div>
+          <label for="nome">Nome completo *</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" class="campo">
+          <span class="msg-erro" data-erro="nome"></span>
+        </div>
+
+        <div>
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" placeholder="nome@exemplo.com" class="campo">
+          <span class="msg-erro" data-erro="email"></span>
+        </div>
+
+        <div>
+          <label for="telefone">Telefone *</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" class="campo">
+          <span class="msg-erro" data-erro="telefone"></span>
+        </div>
+
+        <div>
+          <label for="curso">Curso de interesse *</label>
+          <select id="curso" name="curso" class="campo">
+            <option value="">Selecione um curso</option>
+            <option>Bootcamp Full-Stack Moderno</option>
+            <option>Data Science de A a Z</option>
+            <option>Fundamentos de UI/UX</option>
+            <option>Arquitetura de Sistemas Escaláveis</option>
+            <option>DevOps &amp; Cloud na AWS</option>
+          </select>
+          <span class="msg-erro" data-erro="curso"></span>
+        </div>
+
+        <div class="campo-inteiro">
+          <label>Turno preferido *</label>
+          <div class="turnos">
+            <label><input type="radio" name="turno" value="Manhã">Manhã</label>
+            <label><input type="radio" name="turno" value="Tarde">Tarde</label>
+            <label><input type="radio" name="turno" value="Noite">Noite</label>
+          </div>
+          <span class="msg-erro" data-erro="turno"></span>
+        </div>
+
+        <div>
+          <label for="dataInicio">Data de início desejada *</label>
+          <input id="dataInicio" name="dataInicio" type="date" class="campo">
+          <span class="msg-erro" data-erro="dataInicio"></span>
+        </div>
+
+        <div>
+          <label for="origem">Como nos conheceu?</label>
+          <select id="origem" name="origem" class="campo">
+            <option value="">Opcional</option>
+            <option>Instagram</option>
+            <option>YouTube</option>
+            <option>Indicação de amigo</option>
+            <option>Busca no Google</option>
+          </select>
+        </div>
+
+        <div class="campo-inteiro">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre seus objetivos..." class="campo"></textarea>
+        </div>
+
+        <div class="campo-inteiro">
+          <label class="termos">
+            <input type="checkbox" name="termos">
+            <span>Li e aceito os <a href="sobre.html">termos de uso</a> e a política de privacidade. *</span>
+          </label>
+          <span class="msg-erro" data-erro="termos"></span>
+        </div>
+      </div>
+
+      <button type="submit" class="botao-enviar">Enviar matrícula</button>
+      <p>Campos marcados com * são obrigatórios.</p>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <div>
+        <a href="index.html" class="logo"><b>&lt;/&gt;</b> IT_ACADEMY</a>
+        <p>Educação em tecnologia baseada em projetos reais. Aprenda as habilidades mais demandadas do mercado.</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="index.html">Home</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="matricula.html">Matrícula</a>
+      </div>
+      <div>
+        <h4>Conta</h4>
+        <a href="login.html">Entrar</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© 2026 IT_ACADEMY. Projeto acadêmico.</span>
+      <div>
+        <a href="sobre.html">Privacidade</a>
+        <a href="sobre.html">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/matricula.js"></script>
+</body>
+</html>
