@@ -1,4 +1,4 @@
-/* Funcionalidade 5: acordeão das perguntas frequentes */
+/* acordeão das perguntas frequentes */
 
 $(function () {
 

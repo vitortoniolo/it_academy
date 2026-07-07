@@ -1,4 +1,4 @@
-/* Funcionalidades 3 e 4: busca e filtro por categoria no catálogo.
+/* busca e filtro por categoria no catálogo.
    Os cards estão escritos no HTML; o JavaScript só mostra e esconde. */
 
 $(function () {

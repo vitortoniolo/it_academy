@@ -1,4 +1,4 @@
-/* alidação do formulário de matrícula */
+/* validação do formulário de matrícula */
 
 $(function () {
 
